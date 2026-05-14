@@ -1,4 +1,4 @@
-/* ===========================================================
+﻿/* ===========================================================
    Barbearia Soares — versão simples (HTML + CSS + JS)
    Dark + champagne gold
    =========================================================== */
@@ -1075,106 +1075,161 @@ a { color: inherit; text-decoration: none; }
   .barbers    { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 760px) {
-  .footer__inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer__inner { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 720px) {
-  .section { padding: 64px 18px; }
-  .hero { padding: 96px 18px 56px; min-height: auto; }
-  .hero__logo { max-width: 260px; margin-bottom: 18px; }
-  .hero__title { font-size: clamp(34px, 10vw, 56px); margin: 4px 0 18px; }
-  .hero__sub { font-size: 15px; margin-bottom: 28px; }
-  .hero__meta { gap: 22px 28px; margin-top: 44px; }
-  .hero__meta > div { flex: 0 0 calc(50% - 14px); }
-  .hero__meta strong { font-size: 18px; }
-  .btn-primary { padding: 16px 26px; font-size: 12px; letter-spacing: 0.22em; }
-  .btn-ghost   { padding: 14px 22px; font-size: 11px; letter-spacing: 0.20em; }
 
-  .about__media-card--badge { padding: 18px; }
-  .about__media-card--badge .badge-num { font-size: 40px; }
-  .about__media-card--badge .badge-sub { font-size: 19px; }
+  /* Geral */
+  .section { padding: 60px 20px; }
+
+  /* Hero */
+  .hero { padding: 100px 20px 60px; min-height: auto; }
+  .hero__logo { max-width: 240px; margin-bottom: 18px; }
+  .hero__tag { font-size: clamp(22px, 5.5vw, 32px); }
+  .hero__title { font-size: clamp(34px, 10vw, 52px); margin: 6px 0 20px; }
+  .hero__sub { font-size: 15px; margin-bottom: 28px; }
+  .hero__meta { gap: 18px 24px; margin-top: 44px; justify-content: center; flex-wrap: wrap; }
+  .hero__meta > div { flex: 0 0 calc(50% - 12px); text-align: center; }
+  .hero__meta strong { font-size: 18px; }
+  .btn-primary { padding: 15px 28px; font-size: 12px; letter-spacing: 0.2em; }
+  .btn-ghost   { padding: 14px 22px; font-size: 11px; letter-spacing: 0.18em; }
+
+  /* Eyebrow simetrico em todas as secoes */
+  .section .eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .section .eyebrow::before { margin-right: 0; transform: none; }
+  .section .eyebrow::after  { content: ""; display: block; width: 28px; height: 1px; background: var(--gold); }
+
+  /* Sobre */
+  .about__media { gap: 10px; }
+  .about__media-card--badge { padding: 16px; }
+  .about__media-card--badge .badge-num { font-size: 38px; }
+  .about__media-card--badge .badge-sub { font-size: 18px; }
   .about__media-card--badge .badge-label { font-size: 10px; }
-  .about__title { font-size: clamp(30px, 9vw, 44px); }
-  .about__body { font-size: 15px; line-height: 1.7; }
-  .about__stats > div { padding: 18px 8px 0; }
-  .about__stats strong { font-size: 26px; }
+  .about > div:last-child { text-align: center; }
+  .about__title { font-size: clamp(28px, 8vw, 44px); margin: 16px 0 10px; }
+  .about__body { font-size: 15px; line-height: 1.75; text-align: left; }
+  .about__stats { grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
+  .about__stats > div { padding: 16px 6px 0; text-align: center; }
+  .about__stats strong { font-size: 24px; }
   .about__stats span { font-size: 9px; }
 
-  .gallery__head h2,
-  .testimonials__head h2,
-  .booking__head h2,
-  .hours__title { font-size: clamp(30px, 9vw, 44px); }
+  /* Galeria */
+  .gallery__head { flex-direction: column; align-items: center; text-align: center; gap: 16px; margin-bottom: 32px; }
+  .gallery__head-left { text-align: center; }
+  .gallery__head h2 { font-size: clamp(28px, 8vw, 44px); margin: 10px 0 0; }
+  .gallery__head p { text-align: center; max-width: 100%; margin: 12px 0 0; }
   .gallery__counter { font-size: 14px; }
-  .gallery__counter::before { width: 24px; }
+  .gallery__counter::before { width: 20px; }
+  .gallery__grid.is-collapsed .gallery__item:nth-child(n+4) { display: none; }
+  .gallery__grid.is-collapsed + .gallery__ver-mais { display: block !important; }
 
-  .gallery__grid.is-collapsed .gallery__item:nth-child(n+4) {
-    display: none;
-  }
-  .gallery__grid.is-collapsed + .gallery__ver-mais {
-    display: block !important;
-  }
-
-  .rating-card { padding: 20px 22px; }
-  .rating-card__score { font-size: 48px; }
-
+  /* Depoimentos */
+  .testimonials__head { text-align: center; }
+  .testimonials__head-left { text-align: center; }
+  .testimonials__head h2 { font-size: clamp(28px, 8vw, 44px); }
+  .testimonials__head p { text-align: center; }
+  .rating-card { padding: 22px; }
+  .rating-card__score { font-size: 52px; }
   .review { padding: 20px; gap: 12px; flex-basis: 84%; }
   .review__text { font-size: 15px; }
   .review__name { font-size: 15px; }
   .reviews-wrap { margin: 0 -20px; padding: 0 20px; }
   .reviews-nav { display: none; }
 
-  .booking__card { padding: 16px 12px; border-radius: 12px; }
-  .booking__card::before { inset: 4px; }
-  .step + .step { margin-top: 18px; padding-top: 18px; }
-  .step__label { flex-wrap: wrap; gap: 8px; }
-  .step__num { width: 24px; height: 24px; font-size: 13px; }
-  .step__title { font-size: 16px; }
-  .step__hint { margin-left: 0; width: 100%; font-size: 10px; }
+  /* Agendamento */
+  .booking__head { margin-bottom: 36px; }
+  .booking__head h2 { font-size: clamp(28px, 8vw, 44px); }
+  .booking__head p { font-size: 14px; }
+  .booking__card { padding: 26px 18px; border-radius: 18px; }
+  .booking__card::before { inset: 8px; border-radius: 12px; }
 
-  .services__list { grid-template-columns: 1fr; gap: 8px; }
-  .service { padding: 12px; border-radius: 8px; }
-  .service__name { font-size: 14px; }
-  .service__price { font-size: 14px; }
+  .step + .step { margin-top: 26px; padding-top: 26px; }
+  .step__label { flex-wrap: nowrap; gap: 12px; margin-bottom: 16px; align-items: center; }
+  .step__num { width: 30px; height: 30px; font-size: 13px; flex-shrink: 0; }
+  .step__title { font-size: 16px; flex: 1; }
+  .step__hint { display: none; }
 
-  .barbers { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .barber { padding: 12px 8px 10px; border-radius: 8px; }
-  .barber__photo { width: 56px; height: 56px; margin-bottom: 8px; }
-  .barber__name { font-size: 15px; }
+  .services { gap: 22px; }
+  .services__group-title { font-size: 10px; }
+  .services__list { grid-template-columns: 1fr; gap: 10px; }
+  .service { padding: 16px 14px; border-radius: 10px; min-height: 60px; gap: 14px; align-items: center; }
+  .service__check { width: 20px; height: 20px; flex-shrink: 0; }
+  .service__name { font-size: 15px; }
+  .service__duration { font-size: 11px; }
+  .service__price { font-size: 16px; }
 
-  .day { flex: 0 0 54px; padding: 8px 4px; }
-  .day__num { font-size: 18px; }
+  .barbers { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .barber { padding: 18px 10px 16px; border-radius: 12px; }
+  .barber__photo { width: 72px; height: 72px; margin-bottom: 10px; }
+  .barber__name { font-size: 17px; }
+  .barber__role { font-size: 9px; }
+  .barber__tag { font-size: 11px; }
+  .barber__check { width: 20px; height: 20px; top: 12px; right: 12px; }
 
-  .times { grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 6px; }
-  .time  { padding: 8px 4px; font-size: 13px; border-radius: 6px; }
+  .calendar { gap: 8px; padding-bottom: 10px; }
+  .day { flex: 0 0 68px; padding: 12px 6px; border-radius: 10px; }
+  .day__weekday { font-size: 9px; letter-spacing: 0.14em; margin-bottom: 6px; }
+  .day__num { font-size: 24px; }
+  .day__month { font-size: 9px; letter-spacing: 0.12em; margin-top: 6px; }
 
-  .fields-row { grid-template-columns: 1fr; gap: 10px; }
-  .field { height: auto; margin-bottom: 12px; gap: 6px; }
-  .field input { height: 44px; font-size: 14px; }
+  .times { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 8px; }
+  .time { padding: 13px 6px; font-size: 14px; border-radius: 8px; min-height: 46px; display: grid; place-items: center; }
+  .times__empty { padding: 32px 16px; font-size: 16px; }
 
-  .booking__summary { flex-direction: column; align-items: flex-start; gap: 4px; padding: 12px 14px; }
+  .fields-row { grid-template-columns: 1fr; gap: 12px; }
+  .field { margin-bottom: 12px; gap: 7px; }
+  .field label { font-size: 10px; }
+  .field input { height: 52px; font-size: 15px; padding: 14px 16px; border-radius: 10px; }
+
+  .booking__submit { gap: 16px; margin-top: 30px; }
+  .booking__summary { flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 16px; border-radius: 10px; }
   .booking__summary-text { font-size: 15px; }
-  .booking__summary-text small { font-size: 11px; }
-  .booking__total { font-size: 18px; }
-  .btn-whats { padding: 14px 20px; width: 100%; justify-content: center; font-size: 14px; height: 46px; }
+  .booking__summary-text small { font-size: 10px; }
+  .booking__total { font-size: 22px; }
+  .btn-whats { width: 100%; justify-content: center; padding: 18px 20px; font-size: 13px; height: 56px; letter-spacing: 0.2em; border-radius: 14px; }
 
-  .schedule { padding: 26px 20px; }
-  .schedule__list li { padding: 12px 0; font-size: 14px; }
+  /* Horarios */
+  .hours > div:first-child { text-align: center; }
+  .hours__title { font-size: clamp(28px, 8vw, 44px); margin: 16px 0 18px; }
+  .hours__lede { text-align: center; font-size: 15px; margin-bottom: 30px; }
+  .hours__contact { align-items: center; gap: 16px; }
+  .schedule { padding: 28px 22px; border-radius: 16px; }
+  .schedule__head { font-size: 26px; }
+  .schedule__list li { padding: 13px 0; font-size: 14px; }
   .schedule__list .day-name { font-size: 15px; }
 
-  .footer { padding: 56px 18px 28px; }
-  .footer__logo { height: 56px; }
+  /* Footer */
+  .footer { padding: 52px 20px 28px; }
+  .footer__inner { text-align: center; gap: 36px; }
+  .footer__logo { margin: 0 auto 16px; height: 54px; }
   .footer__tag { font-size: 22px; }
+  .footer__address { font-size: 14px; }
+  .footer__socials { justify-content: center; }
+  .footer h4 { text-align: center; }
+  .footer ul { text-align: center; }
+  .footer ul a { justify-content: center; }
+  .footer__base { flex-direction: column; text-align: center; gap: 8px; margin-top: 40px; }
+
+  /* Misc */
   .fab-whats { width: 52px; height: 52px; right: 16px; bottom: 16px; }
   .nav { padding: 12px 16px; }
-  .mobile-menu { top: 58px; padding: 28px 18px; }
-  .mobile-menu a { font-size: 24px; }
+  .mobile-menu { top: 58px; padding: 32px 20px; }
+  .mobile-menu a { font-size: 24px; padding: 16px 0; }
 }
 @media (max-width: 460px) {
   .barbers { grid-template-columns: 1fr; }
+  .hero__meta > div { flex: 0 0 100%; }
 }
 @media (max-width: 380px) {
-  .section { padding: 56px 14px; }
+  .section { padding: 52px 14px; }
   .hero { padding: 84px 14px 48px; }
-  .hero__logo { max-width: 220px; }
-  .hero__meta > div { flex-basis: 100%; text-align: center; }
-  .day { flex: 0 0 58px; }
+  .hero__logo { max-width: 200px; }
+  .day { flex: 0 0 60px; }
+  .booking__card { padding: 20px 14px; }
 }
