@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbearia Soares — Tradição, estilo e cuidado</title>
+  <meta name="description" content="Cortes precisos, barba à navalha e ambiente acolhedor para o homem moderno. Agende seu horário online na Barbearia Soares." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Italianno&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/logo-gold.png" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand">
+      <img class="nav__logo" src="assets/logo-gold.png" alt="Barbearia Soares" />
+    </a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#trabalhos">Trabalhos</a></li>
+        <li><a href="#depoimentos">Avaliações</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+        <li><a href="#horarios">Horários</a></li>
+      </ul>
+    </nav>
+    <a class="nav__cta" href="#agendar">Agendar</a>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#sobre"><span>01</span>Sobre</a></li>
+      <li><a href="#trabalhos"><span>02</span>Trabalhos</a></li>
+      <li><a href="#depoimentos"><span>03</span>Avaliações</a></li>
+      <li><a href="#agendar"><span>04</span>Agendar</a></li>
+      <li><a href="#horarios"><span>05</span>Horários</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__bg"></div>
+    <div class="hero__inner">
+      <img class="hero__logo" src="assets/logo-gold.png" alt="Barbearia Soares" />
+      <div class="hero__tag">Tradição, estilo &amp; cuidado</div>
+      <h1 class="hero__title">Um corte que <em>conta a sua</em><br/>história.</h1>
+      <p class="hero__sub">
+        Cortes precisos, barba feita à navalha e um ambiente onde
+        cada detalhe é pensado para o homem moderno.
+      </p>
+      <a class="btn-primary" href="#agendar">
+        Agende seu horário
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="hero__meta">
+        <div><strong>+10 anos</strong>de tradição</div>
+        <div><strong>Uberlândia</strong>MG · Brasil</div>
+        <div><strong>5,0 ★</strong>avaliações Google</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section about reveal" id="sobre">
+    <div class="about__media">
+      <div class="about__media-card about__media-card--tall">
+        <img src="assets/interior-sign.jpg" alt="Letreiro da Barbearia Soares" loading="lazy" />
+      </div>
+      <div class="about__media-card about__media-card--wide">
+        <img src="assets/interior-chairs.jpg" alt="Interior com cadeiras" loading="lazy" />
+      </div>
+      <div class="about__media-card about__media-card--badge">
+        <div class="badge-num">EST.</div>
+        <div class="badge-sub">Barbearia Soares</div>
+        <div class="badge-label">Tradição &amp; cuidado</div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">Sobre nós</div>
+      <h2 class="about__title">Estilo e tradição,<br/><em>em cada detalhe.</em></h2>
+      <div class="about__body">
+        <p>Bem-vindo à Barbearia Soares, onde estilo e tradição se encontram.
+          Somos mais do que uma barbearia; somos um espaço pensado para o homem
+          moderno que valoriza um bom atendimento, um corte de qualidade e um
+          ambiente acolhedor.</p>
+        <p>Aqui, cada detalhe importa: do atendimento personalizado aos produtos
+          de primeira linha. Venha viver uma nova experiência em cuidados
+          masculinos. Seu visual merece o melhor!</p>
+      </div>
+      <div class="about__stats">
+        <div><strong>+10</strong><span>Anos de Casa</span></div>
+        <div><strong>5,0★</strong><span>Avaliação Média</span></div>
+        <div><strong>+8mil</strong><span>Clientes Atendidos</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRABALHOS -->
+  <section class="section gallery reveal" id="trabalhos">
+    <div class="gallery__head">
+      <div class="gallery__head-left">
+        <div class="eyebrow">Nossos trabalhos</div>
+        <h2>O resultado fala<br/><em>por si só.</em></h2>
+        <p>Uma seleção de cortes, barbas e desenhos feitos no nosso espaço.
+          Cada cliente sai daqui com a versão mais nítida do próprio estilo.</p>
+      </div>
+      <div class="gallery__counter">16 · Trabalhos recentes</div>
+    </div>
+    <div class="gallery__grid is-collapsed" id="gallery-grid"></div>
+    <div class="gallery__ver-mais" style="text-align: center; margin-top: 24px; display: none;">
+      <button class="btn-ghost" id="btn-ver-mais">
+        Ver mais trabalhos
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+    <div class="gallery__cta">
+      <a class="btn-ghost" href="#agendar">
+        Quero esse acabamento — agendar
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section testimonials reveal" id="depoimentos">
+    <div class="testimonials__head">
+      <div class="testimonials__head-left">
+        <div class="eyebrow">O que dizem de nós</div>
+        <h2>Avaliações dos<br/><em>nossos clientes.</em></h2>
+        <p>Histórias reais de quem já passou pela cadeira da Soares — coletadas
+          direto do Google. Confira, e se você também já é cliente, deixe a sua.</p>
+      </div>
+      <div class="testimonials__head-right">
+        <div class="rating-card">
+          <div class="rating-card__top">
+            <svg class="g-icon" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.6-6 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C33.5 6.2 28.9 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/>
+              <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C33.5 6.2 28.9 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+              <path fill="#4CAF50" d="M24 44c4.9 0 9.3-1.9 12.6-4.9l-5.8-4.9c-1.9 1.3-4.3 2-6.8 2-5.3 0-9.7-3.4-11.3-8L6 33C9.3 39.6 16 44 24 44z"/>
+              <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.4 5.8l5.8 4.9C40.2 35.5 44 30.2 44 24c0-1.3-.1-2.3-.4-3.5z"/>
+            </svg>
+            <span class="rating-card__brand">Google Reviews</span>
+          </div>
+          <div class="rating-card__score">5,0</div>
+          <span class="stars" aria-label="5 estrelas">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </span>
+          <div class="rating-card__count">Baseado em 18+ avaliações</div>
+          <a href="https://maps.app.goo.gl/RfbFvAhBVZEECsra7" target="_blank" rel="noopener" class="btn-ghost rating-card__cta">
+            Avalie você também
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-wrap">
+      <button class="reviews-nav reviews-nav--prev" type="button" aria-label="Anterior" data-rev-dir="-1">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="reviews" id="reviews"></div>
+      <button class="reviews-nav reviews-nav--next" type="button" aria-label="Próxima" data-rev-dir="1">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- AGENDAR -->
+  <section class="booking" id="agendar">
+    <div class="section">
+      <div class="booking__head reveal">
+        <div class="eyebrow">Agendamento online</div>
+        <h2>Reserve o seu <em>horário</em></h2>
+        <p>Escolha o serviço, o barbeiro, a data e o horário que melhor combinam com você.
+          Confirmamos o agendamento diretamente pelo WhatsApp.</p>
+      </div>
+
+      <form class="booking__card reveal" id="booking-form" novalidate>
+
+        <!-- STEP 1 — Service -->
+        <div class="step">
+          <div class="step__label">
+            <span class="step__num">I</span>
+            <span class="step__title">Escolha o serviço</span>
+            <span class="step__hint" id="hint-service">Selecione um</span>
+          </div>
+          <div class="services" id="services"></div>
+        </div>
+
+        <!-- STEP 2 — Barber -->
+        <div class="step">
+          <div class="step__label">
+            <span class="step__num">II</span>
+            <span class="step__title">Escolha o barbeiro</span>
+            <span class="step__hint" id="hint-barber">Quem vai te atender</span>
+          </div>
+          <div class="barbers" id="barbers"></div>
+        </div>
+
+        <!-- STEP 3 — Date -->
+        <div class="step">
+          <div class="step__label">
+            <span class="step__num">III</span>
+            <span class="step__title">Escolha a data</span>
+            <span class="step__hint">Próximos 14 dias</span>
+          </div>
+          <div class="calendar" id="calendar"></div>
+        </div>
+
+        <!-- STEP 4 — Time -->
+        <div class="step">
+          <div class="step__label">
+            <span class="step__num">IV</span>
+            <span class="step__title">Escolha o horário</span>
+            <span class="step__hint" id="hint-time">Selecione uma data</span>
+          </div>
+          <div class="times" id="times">
+            <div class="times__empty">Selecione uma data para ver os horários.</div>
+          </div>
+        </div>
+
+        <!-- STEP 5 — Data -->
+        <div class="step">
+          <div class="step__label">
+            <span class="step__num">V</span>
+            <span class="step__title">Seus dados</span>
+            <span class="step__hint">Para identificação</span>
+          </div>
+          <div class="field">
+            <label for="name">Nome completo</label>
+            <input id="name" name="name" type="text" placeholder="João da Silva" required />
+          </div>
+          <div class="fields-row">
+            <div class="field">
+              <label for="cpf">CPF</label>
+              <input id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" required />
+              <span class="field__error" id="cpf-error" hidden>CPF inválido</span>
+            </div>
+            <div class="field">
+              <label for="phone">Telefone (opcional)</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="(34) 99999-0000" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="booking__submit">
+          <div class="booking__summary">
+            <div class="booking__summary-text">
+              <small>Resumo</small>
+              <span id="summary-text">Serviço a definir</span>
+            </div>
+            <div class="booking__total" id="summary-total">—</div>
+          </div>
+          <button type="submit" class="btn-whats" id="btn-confirm" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zm-5.5 7.6h0c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.5-9.9 9.9-9.9 2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.4 2.9 7 0 5.5-4.5 9.9-10 9.9zm8.4-18.3C18.2 1.6 15.2.5 12 .5 5.5.5.2 5.8.2 12.3c0 2.1.5 4.1 1.6 5.9L0 24.5l6.4-1.7c1.8 1 3.8 1.5 5.9 1.5h0c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3z"/>
+            </svg>
+            Confirmar via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- HORÁRIOS -->
+  <section class="section hours reveal" id="horarios">
+    <div>
+      <div class="eyebrow">Funcionamento</div>
+      <h2 class="hours__title">Estamos prontos<br/>para receber <em>você.</em></h2>
+      <p class="hours__lede">Atendimento com hora marcada. Confira nossos horários e venha
+        viver uma nova experiência em cuidados masculinos.</p>
+      <div class="hours__contact">
+        <a href="https://wa.me/5534992040300" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          (34) 99204-0300
+        </a>
+        <a href="https://instagram.com/barbearia_soares_s" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          @barbearia_soares_s
+        </a>
+      </div>
+    </div>
+    <div class="schedule">
+      <div class="schedule__head">Horários</div>
+      <div class="schedule__sub">Hora marcada</div>
+      <ul class="schedule__list" id="schedule-list">
+        <li data-day="1"><span class="day-name">Segunda-feira</span><span class="day-hours closed">Fechado</span></li>
+        <li data-day="2-5"><span class="day-name">Terça a Sexta-feira</span><span class="day-hours">09:30 — 19:30</span></li>
+        <li data-day="6"><span class="day-name">Sábado</span><span class="day-hours">08:00 — 18:00</span></li>
+        <li data-day="0"><span class="day-name">Domingo</span><span class="day-hours closed">Fechado</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contato">
+    <div class="footer__inner">
+      <div>
+        <img class="footer__logo" src="assets/logo-gold.png" alt="Barbearia Soares" />
+        <div class="footer__tag">Tradição &amp; estilo</div>
+        <p class="footer__address">Mais que uma barbearia, um espaço de cuidado para o homem moderno.
+          Hora marcada — apareça e viva a experiência.</p>
+        <div class="footer__socials">
+          <a href="https://wa.me/5534992040300" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zm-5.5 7.6h0c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.5-9.9 9.9-9.9 2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.4 2.9 7 0 5.5-4.5 9.9-10 9.9zm8.4-18.3C18.2 1.6 15.2.5 12 .5 5.5.5.2 5.8.2 12.3c0 2.1.5 4.1 1.6 5.9L0 24.5l6.4-1.7c1.8 1 3.8 1.5 5.9 1.5h0c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3z"/></svg>
+          </a>
+          <a href="https://instagram.com/barbearia_soares_s" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#trabalhos">Trabalhos</a></li>
+          <li><a href="#depoimentos">Avaliações</a></li>
+          <li><a href="#agendar">Agendamento</a></li>
+          <li><a href="#horarios">Horários</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5534992040300" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zm-5.5 7.6h0c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.5-9.9 9.9-9.9 2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.4 2.9 7 0 5.5-4.5 9.9-10 9.9zm8.4-18.3C18.2 1.6 15.2.5 12 .5 5.5.5.2 5.8.2 12.3c0 2.1.5 4.1 1.6 5.9L0 24.5l6.4-1.7c1.8 1 3.8 1.5 5.9 1.5h0c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3z"/></svg>
+            (34) 99204-0300
+          </a></li>
+          <li><a href="https://instagram.com/barbearia_soares_s" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            @barbearia_soares_s
+          </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© <span id="year"></span> Barbearia Soares</span>
+      <span>Feito com cuidado, do primeiro corte ao último detalhe</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a class="fab-whats" href="https://wa.me/5534992040300" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zm-5.5 7.6h0c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.5-9.9 9.9-9.9 2.6 0 5.1 1 7 2.9 1.9 1.9 2.9 4.4 2.9 7 0 5.5-4.5 9.9-10 9.9zm8.4-18.3C18.2 1.6 15.2.5 12 .5 5.5.5.2 5.8.2 12.3c0 2.1.5 4.1 1.6 5.9L0 24.5l6.4-1.7c1.8 1 3.8 1.5 5.9 1.5h0c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3z"/></svg>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img class="lightbox__img" id="lightbox-img" alt="" />
+    <button class="lightbox__close" id="lightbox-close" aria-label="Fechar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" data-lb-dir="-1" aria-label="Anterior">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" data-lb-dir="1" aria-label="Próxima">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="lightbox__counter" id="lightbox-counter"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/davicjc/FooterDavicjc@main/footer_cjc.js"></script>
+</html>
